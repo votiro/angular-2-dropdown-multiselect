@@ -2,7 +2,7 @@
   <button type="button" class="dropdown-toggle" [ngClass]="settings.buttonClasses" (click)="toggleDropdown($event)" [disabled]="disabled"
     [ssAutofocus]="!focusBack">
     {{ title }}
-    <span class="caret"></span>
+    <span class="caret fas fa-chevron-down"></span>
   </button>
   <div #scroller *ngIf="isVisible" class="dropdown-menu" [ngClass]="{'chunkydropdown-menu': settings.checkedStyle == 'visual' }"
     (scroll)="settings.isLazyLoad ? checkScrollPosition($event) : null" (wheel)="settings.stopScrollPropagation ? checkScrollPropagation($event, scroller) : null"
